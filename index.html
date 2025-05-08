@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Data Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .theme-switcher .icon-sun { display: none; }
+        .theme-switcher .icon-moon { display: inline; }
+        body.dark-mode .theme-switcher .icon-sun { display: inline; }
+        body.dark-mode .theme-switcher .icon-moon { display: none; }
+    </style>
+</head>
+<body>
+    <button class="theme-switcher" id="theme-switcher" title="Toggle theme">
+        <span class="icon-moon">🌙</span>
+        <span class="icon-sun">☀️</span>
+    </button>
+
+    <header>
+        <h1>fakexy</h1>
+        <nav>
+            <button class="tab-button active" data-tab="us-generator">US Address</button>
+            <button class="tab-button" data-tab="ca-generator">CA Address</button>
+            <button class="tab-button" data-tab="de-generator">DE Address</button>
+            <button class="tab-button" data-tab="uk-generator">UK Address</button>
+            <button class="tab-button" data-tab="all-countries-generator">All Countries</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="us-generator" class="data-generator-section active">
+            <h2>US Address Generator</h2>
+            <div class="generated-data">
+                <div class="data-group">
+                    <h3>Address Information</h3>
+                    <p><strong>Street:</strong> <span id="us-street">-</span></p>
+                    <p><strong>City/Town:</strong> <span id="us-city">-</span></p>
+                    <p><strong>State/Province/Region:</strong> <span id="us-state">-</span></p>
+                    <p><strong>Zip/Postal Code:</strong> <span id="us-zip">-</span></p>
+                    <p><strong>Phone Number:</strong> <span id="us-phone">-</span></p>
+                    <p><strong>Country:</strong> <span id="us-country">-</span></p>
+                    <p><strong>Latitude:</strong> <span id="us-latitude">-</span></p>
+                    <p><strong>Longitude:</strong> <span id="us-longitude">-</span></p>
+                </div>
+                <div class="data-group">
+                    <h3>Matched Person Profile</h3>
+                    <p><strong>Full Name:</strong> <span id="us-fullname">-</span></p>
+                    <p><strong>Gender:</strong> <span id="us-gender">-</span></p>
+                    <p><strong>Birthday:</strong> <span id="us-birthday">-</span></p>
+                    <p><strong>Social Security Number:</strong> <span id="us-ssn">-</span></p>
+                    <p class="disclaimer">Note: SSN is randomly generated for visual purposes only and is NOT a real SSN.</p>
+                </div>
+                <div class="data-group">
+                    <h3>Finance & Credit Card Information</h3>
+                    <p><strong>Credit Card Brand:</strong> <span id="us-cc-brand">-</span></p>
+                    <p><strong>Credit Card Number:</strong> <span id="us-cc-number">-</span></p>
+                    <p><strong>Expire:</strong> <span id="us-cc-expire">-</span></p>
+                    <p><strong>CVV:</strong> <span id="us-cc-cvv">-</span></p>
+                    <p class="disclaimer">Note: Credit card details are randomly generated, NOT real, and for illustrative purposes only.</p>
+                </div>
+            </div>
+            <button id="generate-us-data" class="generate-button">Generate US Data</button>
+        </section>
+
+        <section id="ca-generator" class="data-generator-section">
+            <h2>CA Address Generator</h2>
+            <div class="generated-data">
+                <div class="data-group">
+                    <h3>Address Information</h3>
+                    <p><strong>Street:</strong> <span id="ca-street">-</span></p>
+                    <p><strong>City/Town:</strong> <span id="ca-city">-</span></p>
+                    <p><strong>Province/Territory:</strong> <span id="ca-province">-</span></p>
+                    <p><strong>Postal Code:</strong> <span id="ca-postal">-</span></p>
+                    <p><strong>Phone Number:</strong> <span id="ca-phone">-</span></p>
+                    <p><strong>Country:</strong> <span id="ca-country">-</span></p>
+                    <p><strong>Latitude:</strong> <span id="ca-latitude">-</span></p>
+                    <p><strong>Longitude:</strong> <span id="ca-longitude">-</span></p>
+                </div>
+                <div class="data-group">
+                    <h3>Matched Person Profile</h3>
+                    <p><strong>Full Name:</strong> <span id="ca-fullname">-</span></p>
+                    <p><strong>Gender:</strong> <span id="ca-gender">-</span></p>
+                    <p><strong>Birthday:</strong> <span id="ca-birthday">-</span></p>
+                    <p><strong>Social Insurance Number:</strong> <span id="ca-sin">-</span></p>
+                    <p class="disclaimer">Note: SIN is randomly generated for visual purposes only and is NOT a real SIN.</p>
+                </div>
+                <div class="data-group">
+                    <h3>Finance & Credit Card Information</h3>
+                    <p><strong>Credit Card Brand:</strong> <span id="ca-cc-brand">-</span></p>
+                    <p><strong>Credit Card Number:</strong> <span id="ca-cc-number">-</span></p>
+                    <p><strong>Expire:</strong> <span id="ca-cc-expire">-</span></p>
+                    <p><strong>CVV:</strong> <span id="ca-cc-cvv">-</span></p>
+                    <p class="disclaimer">Note: Credit card details are randomly generated, NOT real, and for illustrative purposes only.</p>
+                </div>
+            </div>
+            <button id="generate-ca-data" class="generate-button">Generate CA Data</button>
+        </section>
+
+        <section id="de-generator" class="data-generator-section">
+            <h2>DE Address Generator</h2>
+            <div class="generated-data">
+                <div class="data-group">
+                    <h3>Address Information (Anschrift)</h3>
+                    <p><strong>Street & Nr. (Straße & Hausnummer):</strong> <span id="de-street">-</span></p>
+                    <p><strong>Postal Code (PLZ):</strong> <span id="de-plz">-</span></p>
+                    <p><strong>City (Stadt):</strong> <span id="de-city">-</span></p>
+                    <p><strong>State (Bundesland):</strong> <span id="de-state">-</span></p>
+                    <p><strong>Phone Number (Telefonnummer):</strong> <span id="de-phone">-</span></p>
+                    <p><strong>Country (Land):</strong> <span id="de-country">-</span></p>
+                    <p><strong>Latitude (Breitengrad):</strong> <span id="de-latitude">-</span></p>
+                    <p><strong>Longitude (Längengrad):</strong> <span id="de-longitude">-</span></p>
+                </div>
+                <div class="data-group">
+                    <h3>Matched Person Profile (Personenprofil)</h3>
+                    <p><strong>Full Name (Vollständiger Name):</strong> <span id="de-fullname">-</span></p>
+                    <p><strong>Gender (Geschlecht):</strong> <span id="de-gender">-</span></p>
+                    <p><strong>Birthday (Geburtstag):</strong> <span id="de-birthday">-</span></p>
+                    <p><strong>Tax ID (Steuer-ID, fiktiv):</strong> <span id="de-taxid">-</span></p>
+                    <p class="disclaimer">Hinweis: Steuer-ID ist zufällig generiert und NICHT echt.</p>
+                </div>
+                <div class="data-group">
+                    <h3>Finance & Credit Card (Finanz & Kreditkarte)</h3>
+                    <p><strong>Credit Card Brand (Kartenmarke):</strong> <span id="de-cc-brand">-</span></p>
+                    <p><strong>Credit Card Number (Kartennummer):</strong> <span id="de-cc-number">-</span></p>
+                    <p><strong>Expire (Gültig bis):</strong> <span id="de-cc-expire">-</span></p>
+                    <p><strong>CVV:</strong> <span id="de-cc-cvv">-</span></p>
+                    <p class="disclaimer">Hinweis: Kreditkartendetails sind zufällig generiert, NICHT echt.</p>
+                </div>
+            </div>
+            <button id="generate-de-data" class="generate-button">Generate DE Data</button>
+        </section>
+
+        <section id="uk-generator" class="data-generator-section">
+            <h2>UK Address Generator</h2>
+            <div class="generated-data">
+                <div class="data-group">
+                    <h3>Address Information</h3>
+                    <p><strong>Building & Street:</strong> <span id="uk-street">-</span></p>
+                    <p><strong>Town/City:</strong> <span id="uk-city">-</span></p>
+                    <p><strong>Postcode:</strong> <span id="uk-postcode">-</span></p>
+                    <p><strong>County (Optional):</strong> <span id="uk-county">-</span></p>
+                    <p><strong>Phone Number:</strong> <span id="uk-phone">-</span></p>
+                    <p><strong>Country:</strong> <span id="uk-country">-</span></p>
+                    <p><strong>Latitude:</strong> <span id="uk-latitude">-</span></p>
+                    <p><strong>Longitude:</strong> <span id="uk-longitude">-</span></p>
+                </div>
+                <div class="data-group">
+                    <h3>Matched Person Profile</h3>
+                    <p><strong>Full Name:</strong> <span id="uk-fullname">-</span></p>
+                    <p><strong>Gender:</strong> <span id="uk-gender">-</span></p>
+                    <p><strong>Birthday:</strong> <span id="uk-birthday">-</span></p>
+                    <p><strong>National Insurance (NI) No.:</strong> <span id="uk-ni">-</span></p>
+                    <p class="disclaimer">Note: NI Number is randomly generated and NOT real.</p>
+                </div>
+                <div class="data-group">
+                    <h3>Finance & Credit Card Information</h3>
+                    <p><strong>Credit Card Brand:</strong> <span id="uk-cc-brand">-</span></p>
+                    <p><strong>Credit Card Number:</strong> <span id="uk-cc-number">-</span></p>
+                    <p><strong>Expire:</strong> <span id="uk-cc-expire">-</span></p>
+                    <p><strong>CVV:</strong> <span id="uk-cc-cvv">-</span></p>
+                    <p class="disclaimer">Note: Credit card details are randomly generated, NOT real.</p>
+                </div>
+            </div>
+            <button id="generate-uk-data" class="generate-button">Generate UK Data</button>
+        </section>
+
+        <section id="all-countries-generator" class="data-generator-section">
+            <h2>All Countries Generator</h2>
+            <p>Multi-country generation coming soon...</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Fake Data Generator. For demonstration purposes only.</p>
+    </footer>
+
+    <script src="js/helpers.js"></script>
+    <script src="js/us-generator.js"></script>
+    <script src="js/ca-generator.js"></script>
+    <script src="js/de-generator.js"></script>
+    <script src="js/uk-generator.js"></script> <script src="js/main.js"></script>
+</body>
+</html>
